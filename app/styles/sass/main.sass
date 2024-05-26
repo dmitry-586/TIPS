@@ -1,0 +1,139 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+
+a
+  text-decoration-line: none
+
+p
+    margin: 0
+    font-family: "Brygada 1918"
+    font-size: 21px
+    font-weight: 400
+    line-height: 120%
+.main
+    h1
+        max-width: 1840px
+.button
+  border-radius: 100px
+  background: $accent
+  color: white
+  width: 221px
+  height: 55px
+  border-style: none
+  transition-duration: 1s
+
+  &:hover
+    border: 1px solid rgb(128, 0, 255)
+    background: transparent
+    color: rgb(128, 0, 255)
+
+.logo
+    float: left
+    display: flex
+    align-items: center
+    gap: 0
+    img
+        width: 30%
+
+.main_location
+  display: flex
+  align-items: center
+  gap: 10px
+  margin-bottom: 64px
+  margin-top: 84px
+
+  img
+    width: 30px
+    height: 30px
+
+  p
+    font-family: "IBM Plex Sans", sans-serif
+    font-size: 24px
+    font-weight: 500
+    line-height: 110%
+
+.main_p_wrapper
+  display: flex
+  justify-content: center
+  margin-bottom: 66px
+
+.main_btn_wrapper
+  display: flex
+  justify-content: center
+
+.main_menu
+  display: flex
+  justify-content: space-between
+  gap: 38px
+  a
+    text-decoration: none
+    color: black
+
+.main_menu_common
+  width: 33.333%
+  border-radius: 0px 0px 40px 0px
+  box-sizing: border-box
+  border-bottom: 1px solid rgb(0, 0, 0)
+  border-right: 1px solid rgb(0, 0, 0)
+  padding: 16px 0 22px 28px
+  cursor: pointer
+  margin-top: 76px
+  background: white
+  transition: all 0.5s ease
+
+.img_white
+  position: absolute
+  opacity: 0
+  transition: 0.4s
+
+.main_menu_common
+  &:hover
+    border-radius: 40px 0px 40px 0px
+    background: $accent
+    border: 1px solid transparent
+
+    .img_black
+      transform: rotate(45deg)
+      opacity: 0
+
+    .img_white
+      animation: vector-animation 0.5s 0.2s forwards
+
+    .main_menu_wrapper, p
+      color: white
+      transition: 0.2s
+
+  p
+    font-family: "IBM Plex Sans"
+    font-size: 21px
+    font-weight: 300
+    line-height: 120%
+    max-width: 433px
+
+.main_img_wrapper
+  width: 24px
+  height: 24px
+  margin-left: auto
+  margin-right: 21px
+
+.img_black
+  position: absolute
+  transition: 0.4s
+
+.main_menu_wrapper
+  display: flex
+  align-items: center
+  margin-bottom: 16px
+
+
+
+@keyframes vector-animation
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
