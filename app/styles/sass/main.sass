@@ -4,26 +4,25 @@
 @import config
 @import 'blocks/**/*'
 
-
 a
   text-decoration-line: none
 
 p
-    margin: 0
-    font-family: "Brygada 1918"
-    font-size: 21px
-    font-weight: 400
-    line-height: 120%
+  margin: 0
+  font-family: "Brygada 1918"
+  font-size: 21px
+  font-weight: 400
+  line-height: 120%
 .main
-    h1
-        max-width: 1840px
+  h1
+    max-width: 1840px
 .button
   border-radius: 100px
   background: $accent
   color: white
   width: 221px
   height: 55px
-  border-style: none
+  border-style: none 
   transition-duration: 1s
 
   &:hover
@@ -32,12 +31,12 @@ p
     color: rgb(128, 0, 255)
 
 .logo
-    float: left
-    display: flex
-    align-items: center
-    gap: 0
-    img
-        width: 30%
+  float: left
+  display: flex
+  align-items: center
+  gap: 0
+  img
+    width: 30%
 
 .main_location
   display: flex
@@ -69,6 +68,7 @@ p
   display: flex
   justify-content: space-between
   gap: 38px
+  margin-bottom: 64px
   a
     text-decoration: none
     color: black
@@ -129,6 +129,14 @@ p
   align-items: center
   margin-bottom: 16px
 
+.portfolio
+  background-color: black
+  padding: 64px 0
+  
+.portfolio_images 
+  display: flex
+  gap: 40px
+  flex-wrap: wrap
 
 
 @keyframes vector-animation
