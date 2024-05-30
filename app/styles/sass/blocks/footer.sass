@@ -7,16 +7,21 @@ footer
     & p
         font-family: IBM Plex Sans
         margin-bottom: 1rem
+        font-weight: 100
     & a
         font-family: IBM Plex Sans
         line-height: 23px
+        font-weight: 100
 
 .footer_top
     display: flex
+    width: 100%
     border-bottom: 1px solid white
     padding-bottom: 53.4px
     margin-bottom: 32px
-    gap: 46px
+
+    &_1
+        margin-right: 46px
 
 .footer_bottom
     display: flex
@@ -45,6 +50,9 @@ footer
         flex-direction: column
         justify-content: space-between
 
+        & button
+            width: 267px
+
     &_menu
         display: flex
         gap: 110px
@@ -61,6 +69,7 @@ footer
         padding-bottom: 32px
         &_1
             width: 308px
+            margin-right: 40px
         &_2
             width: 660px
     .footer_bottom_right
