@@ -9,7 +9,6 @@ header
   align-items: center
   width: 100%
   z-index: 100
-  font-family: "IBM Plex Sans"
 
 .header_logo
   font-size: 47px
@@ -35,6 +34,7 @@ header
     a
         color: white
         padding: 7px 14px
+        // font-family: "IBM Plex Sans"
         &:hover
             background-color: rgb(49, 49, 49)
             border-radius: 5px
@@ -71,5 +71,17 @@ header
 
 // media
 
-@media (max-width: 1200px)
-        
+@media (max-width: 1600px)
+  header
+    height: 62px
+  
+  .header_info
+    font-size: 12px
+    width: 155px
+
+  .menu
+    & a
+      font-size: 16px
+
+  .header_feedback
+    font-size: 16px

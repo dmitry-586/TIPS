@@ -4,7 +4,12 @@ footer
     color: white
     font-family: "IBM Plex Sans"
     font-weight: 300
-
+    & p
+        font-family: IBM Plex Sans
+        margin-bottom: 1rem
+    & a
+        font-family: IBM Plex Sans
+        line-height: 23px
 
 .footer_top
     display: flex
@@ -48,8 +53,17 @@ footer
             font-weight: 700
             margin-bottom: 32px
     
-        
-        
+               
+//media
 
-
-
+@media (max-width: 1760px)
+    .footer_top
+        padding-bottom: 32px
+        &_1
+            width: 308px
+        &_2
+            width: 660px
+    .footer_bottom_right
+        align-items: flex-end
+    .footer_bottom_menu
+        gap: 32px
