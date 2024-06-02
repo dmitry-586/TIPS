@@ -76,3 +76,56 @@ footer
         align-items: flex-end
     .footer_bottom_menu
         gap: 32px
+
+@media (max-width: 428px)
+    body
+        line-height: 11px
+    footer
+        
+        padding: 32px 0
+        & a
+            line-height: 11px
+        & p
+            font-size: 12px
+    .footer_top
+        flex-direction: column
+        padding-bottom: 16px
+        margin-bottom: 16px
+        &_1
+            height: 21px
+            width: 140px
+            margin: 0 0 16px 0
+        &_2
+            width: 288px
+            height: 20px
+    .footer_bottom
+        flex-direction: column
+        &_menu
+            order: 1
+            gap: 27px
+            & p
+                font-size: 12px
+                margin-bottom: 16px
+            & ul
+                font-size: 10px
+                margin-bottom: 0
+                gap: 16px
+             
+           
+        &_right
+            order: 2
+            & button
+                width: 100%
+                height: 38px
+                font-size: 12px
+                margin: 32px 0
+            & p
+                position: absolute
+                bottom: 16px
+        &_left
+            order: 3
+            gap: 16px
+            & p
+                margin: 0
+        
+        
