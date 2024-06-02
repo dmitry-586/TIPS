@@ -47,11 +47,9 @@ header
     margin-bottom: 0
     align-items: center
 
-
 .header_language
   display: flex
   align-items: center
-
 
 .header_feedback
     border: 0.5px solid white
@@ -65,9 +63,69 @@ header
     &:hover
         background: $accent
         border: 1px solid transparent
-        
 
+//burger menu
 
+.burger_menu
+  display: flex
+  flex-direction: column
+  font-family: IBM Plex Sans
+  padding: 0
+  gap: 16px
+  padding: 0
+  list-style: none
+  margin-bottom: 0
+  align-items: flex-start
+  font-size: 24px
+  & a
+    color: white
+
+.burger_menu_wrapper
+  display: flex
+  justify-content: space-between
+
+.header_burger_language
+  display: flex
+  align-items: center
+  width: 100%
+
+.header_burger_menu-btn
+  display: none
+  position: relative
+  height: 14px
+  width: 20px
+  border: none
+  background: transparent
+
+  & span
+    position: absolute
+    width: 20px
+    height: 2px
+    background-color: white
+    border-radius: 50px
+    left: 0px
+    transition: 0.5s
+    &:nth-child(1)
+      transform: translateY(-6px)
+    &:nth-child(3)
+      transform: translateY(6px)
+
+.header_burger_menu
+  display: none
+  padding: 0 16px
+
+  .burger_footer_menu
+    font-family: IBM Plex Sans
+    list-style: none
+    padding: 0
+    gap: 16px
+    display: flex
+    flex-direction: column
+    padding: 0
+    margin-bottom: 0
+    align-items: flex-start
+    color: #FFFFFF80
+          
 
 // media
 
@@ -86,3 +144,47 @@ header
 
   .header_feedback
     font-size: 16px
+
+@media (max-width: 992px)
+  header
+    flex-direction: column
+    height: 50px
+  .container
+    padding: 0 16px
+  
+  .header_info
+    font-size: 6px
+    margin-left: 8px
+    width: 76px
+
+  .menu 
+    display: none
+
+  .header_language
+    display: none
+
+  .header_burger_menu-btn
+    display: block
+
+  .header_feedback
+    width: 100%
+    margin: 32px 0
+
+  .header_burger_menu
+    display: block
+    padding-top: 32px
+    background-color: black
+    height: 100vh
+    width: 100vw
+    position: absolute
+    left: -100vw
+    transition: 0.7s
+
+  header.open .header_burger_menu
+    transform: translateX(100%)
+  header.open .header_burger_menu-btn span:nth-child(2)
+    opacity: 0
+  header.open .header_burger_menu-btn span:nth-child(1)
+    transform: translateY(0) rotate(45deg) 
+  header.open .header_burger_menu-btn span:nth-child(3)
+    transform: translateY(0) rotate(-45deg) 

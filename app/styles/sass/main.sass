@@ -130,6 +130,8 @@ p
   align-items: center
   margin-bottom: 16px
 
+//portfolio
+
 .portfolio
   background-color: black
   padding: 64px 0
@@ -178,4 +180,66 @@ p
   100%
     opacity: 1
 
+@media (max-width: 428px)
+  .container
+    padding: 0 16px
 
+  h1
+    font-size: 32px
+    text-align: start
+    margin-bottom: 16px
+  h2
+    font-size: 12px
+  h3 
+    font-size: 32px
+    margin-bottom: 16px
+
+  .main_location
+    gap: 8px
+    margin: 16px 0
+    & img
+      height: 10px
+      width: 10px
+    & p
+      font-size: 10px
+  
+  .main_p_wrapper
+    margin-bottom: 32px
+    & p
+      font-size: 10px
+
+  .main_btn_wrapper button
+    width: 283px
+    height: 34px
+    font-size: 12px
+
+  .main_menu
+    flex-direction: column
+    gap: 16px
+    margin-top: 32px
+
+    &_common
+      width: 100%
+      margin-top: 0
+      border-radius: 0 0 20px 0
+
+      & p
+        font-size: 10px
+      & img
+        height: 15px
+        width: 15px
+
+    &_wrapper
+      margin-bottom: 12px
+
+  .portfolio
+    padding: 32px 0
+    &_images 
+      gap: 8px
+
+      & img
+        height: 194px
+
+
+    
+    
