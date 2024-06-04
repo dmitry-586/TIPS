@@ -15,7 +15,7 @@ p
   line-height: 120%
   
 main 
-    margin-top: clamp(7.875rem, 4.208rem + 4.07vw, 9.25rem)
+    padding-top: clamp(3.875rem, 0.208rem + 4.07vw, 5.25rem)
 
 .button
   font-family: "IBM Plex Sans"
@@ -43,7 +43,7 @@ main
   align-items: center
   gap: 10px
   margin-bottom: 64px
-  margin-top: 84px
+  margin-top: clamp(4rem, 0.667rem + 3.7vw, 5.25rem)
 
   img
     width: 30px
@@ -59,6 +59,9 @@ main
   display: flex
   justify-content: center
   margin-bottom: 66px
+  align-items: center
+  & p
+    font-size: clamp(1.313rem, 0.813rem + 0.56vw, 1.5rem)
 
 .main_btn_wrapper
   display: flex
@@ -73,6 +76,14 @@ main
     text-decoration: none
     color: black
 
+.img_white
+  position: absolute
+  right: -10px
+  opacity: 0
+  transition: 0.4s
+  height: 58px
+  width: 58px
+
 .main_menu_common
   width: 33.333%
   border-radius: 0px 0px 40px 0px
@@ -81,16 +92,10 @@ main
   border-right: 1px solid rgb(0, 0, 0)
   padding: 16px 0 22px 28px
   cursor: pointer
-  margin-top: 76px
+  margin-top: clamp(4.75rem, -3.917rem + 9.63vw, 8rem)
   background: white
   transition: all 0.5s ease
 
-.img_white
-  position: absolute
-  opacity: 0
-  transition: 0.4s
-
-.main_menu_common
   &:hover
     border-radius: 40px 0px 40px 0px
     background: $accent
@@ -109,14 +114,17 @@ main
 
   p
     font-family: "IBM Plex Sans"
-    font-size: 21px
+    font-size: clamp(1rem, 0.167rem + 0.93vw, 1.313rem)
     font-weight: 300
     line-height: 120%
-    max-width: 433px
+    width: clamp(20.688rem, -7.479rem + 31.3vw, 31.25rem)
 
 .main_img_wrapper
-  width: 24px
-  height: 24px
+  display: flex
+  align-items: center
+  position: relative
+  height: 40px
+  width: 40px
   margin-left: auto
   margin-right: 21px
 
@@ -142,6 +150,7 @@ main
 
   & img
     transition: 1s
+    height: clamp(27rem, -1rem + 31.11vw, 37.5rem)
 
   & img:hover
     transform: scale(1.05)
@@ -150,39 +159,74 @@ main
   
 // media
 
-@media (max-width: 1650px)
+@media (max-width: 1440px)
   h1
-    font-size: 85px
-  h2
-    font-size: 25px
-  
-  main
-    // margin-top: 66px
-
-  .main_p_wrapper p
-    font-size: 21px
-  
-  .main_menu_common p
-    font-size: 16px
-    max-width: 331px 
-  
+    font-size: clamp(3.438rem, -0.313rem + 6.25vw, 5.313rem) 
+    margin-bottom: clamp(1rem, -1rem + 3.33vw, 2rem) 
   .main_location
-    margin-top: 64px
+    margin-top: clamp(2rem, -2rem + 6.67vw, 4rem)
+    & p
+      font-size: 21px
+    & img
+      height: clamp(1.25rem, 2.08vw, 1.875rem)
+      width: clamp(1.25rem, 2.08vw, 1.875rem)
+  .main_p_wrapper
+    padding: 0
+    margin-bottom: clamp(2rem, -2.25rem + 7.08vw, 4.125rem)
+    & p
+      font-size: clamp(1rem, 0.375rem + 1.04vw, 1.313rem)
+  .main_img_wrapper
+    margin-right: 0
+  .main_menu
+    gap: clamp(1rem, -1.75rem + 4.58vw, 2.375rem)
+    margin-bottom: clamp(2.5rem, -0.5rem + 5vw, 4rem)
+    &_wrapper 
+      margin-bottom: clamp(0.5rem, -0.5rem + 1.67vw, 1rem)
+      & h2
+        font-size: clamp(1.125rem, 0.25rem + 1.46vw, 1.563rem)
+    &_common
+      & p
+        font-size: 15px
+        width: clamp(15.625rem, 5.5rem + 16.88vw, 20.688rem)
+    .img_black
+      height: 30px
+      width: 30px
+    .img_white
+      right: 0
+      height: 44px
+      width: 48px
 
-  //portfolio
-  
-  .portfolio_images img
-    height: 432px
-    
+@media (max-width: 960px)
+  h1
+    font-size: clamp(2rem, -0.013rem + 5.75vw, 3.438rem)
+    margin-bottom: clamp(0.5rem, -0.2rem + 2vw, 1rem)
+  .main_location
+    margin-bottom: clamp(1rem, -3.2rem + 12vw, 4rem)
+    gap: 8px
+    & p
+      font-size: clamp(0.75rem, -0.037rem + 2.25vw, 1.313rem)
+    & img
+      width: clamp(0.625rem, -0.25rem + 2.5vw, 1.25rem)
+      height: clamp(0.625rem, -0.25rem + 2.5vw, 1.25rem)
+  .main_p_wrapper p
+    font-size: clamp(0.75rem, 0.4rem + 1vw, 1rem)
+  .main_btn_wrapper button
+    width: 60%
+    height: 45px
+    font-size: clamp(1.125rem, 0.863rem + 0.75vw, 1.313rem)
+    margin-bottom: 50px
+  .main_menu
+    flex-direction: column
+    align-items: center
+    gap: 24px
+    &_common
+      margin-top: 50px
+      width: 80%
+      margin: 0
+      & p
+        width: clamp(18.75rem, 1.25rem + 50vw, 31.25rem)
 
-@keyframes vector-animation
-  0%
-    opacity: 0
-
-  100%
-    opacity: 1
-
-@media (max-width: 430px)
+@media (max-width: 560px)
   .container
     padding: 0 16px
 
@@ -190,8 +234,6 @@ main
     font-size: 32px
     text-align: start
     margin-bottom: 16px
-  h2
-    font-size: 12px
   h3 
     font-size: 32px
     margin-bottom: 16px
@@ -214,6 +256,7 @@ main
     width: 283px
     height: 34px
     font-size: 12px
+    margin: 0
 
   .main_menu
     flex-direction: column
@@ -224,15 +267,25 @@ main
       width: 100%
       margin-top: 0
       border-radius: 0 0 20px 0
-
       & p
         font-size: 10px
+        width: clamp(14.125rem, 7.958rem + 30.83vw, 18.75rem)
       & img
         height: 15px
         width: 15px
 
     &_wrapper
-      margin-bottom: 12px
+      margin-bottom: 0
+      & h2
+        font-size: clamp(0.75rem, 0.25rem + 2.5vw, 1.125rem)
+
+      .img_black
+        height: 20px
+        width: 20px
+      .img_white
+        height: 30px
+        width: 30px
+        right: 12px
 
   .portfolio
     padding: 32px 0
@@ -242,6 +295,13 @@ main
       & img
         height: 194px
 
+
+@keyframes vector-animation
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
 
     
     
