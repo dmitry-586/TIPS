@@ -8,7 +8,7 @@
     width: 100%
     background-color: black
     border-radius: 20px
-    padding: 0 117px
+    padding: 0 clamp(1.938rem, -12.396rem + 15.93vw, 7.313rem) 0 clamp(4.813rem, -1.854rem + 7.41vw, 7.313rem)
 
     &_info
         display: flex
@@ -21,7 +21,7 @@
 
         & p
             font-family: "IBM Plex Sans"
-            font-size: 21px
+            font-size: clamp(1rem, 0.167rem + 0.93vw, 1.313rem)
             font-weight: 300
             line-height: 120%
             margin-bottom: 64px
@@ -43,7 +43,7 @@
 .form_input
     color: white
     width: 626px
-    padding: 0 0 32px 0
+    padding: 0 0 32px 16px
     border: none
     border-bottom: 1px solid white
     background-color: transparent
@@ -85,99 +85,142 @@
 
 .tg_wrapper
     position: relative
-    height: 508px
+    height: clamp(29.563rem, 23.563rem + 6.67vw, 31.813rem)
 
 .tg
     display: flex
     flex-direction: column
     position: absolute
-    margin-top: 73px
-    margin-left: 340px
+    margin-top: clamp(4.25rem, 3.417rem + 0.93vw, 4.563rem)
+    margin-left: clamp(19.063rem, 13.229rem + 6.48vw, 21.25rem)
     cursor: pointer
     align-items: center
+    & img
+        height: clamp(9.625rem, 5.958rem + 4.07vw, 11rem)
 
-.tg p
-    margin-top: 1rem
-    font-family: "angst2"
-    font-size: 24px
-    font-weight: 100
-    line-height: 26.4px
+    & p
+        margin-top: 1rem
+        font-family: "angst2"
+        font-size: 24px
+        font-weight: 100
+        line-height: 26.4px
 
 
 // media
-
-@media (max-width: 1550px)
-
+@media (max-width: 1440px)
     .form
-        padding: 0 31px 0 77px
+        padding: 0 32px 0 clamp(2rem, -24.116rem + 32.14vw, 4.813rem)
 
-    .form_info
-        
-        & p
-            font-size: 16px
 
-    .tg_wrapper
-        height: 473px
-    .tg 
-        margin-left: 305px
-        margin-top: 68px
-        & img
-            height: 154.12px
+@media (max-width: 1300px)
+    .form_wrapper
+        .container
+            display: flex
+            justify-content: center
+    .form
+        padding: 0 32px
+        width: clamp(56.25rem, -10.417rem + 111.11vw, 62.5rem)
+        flex-direction: column
+        &_info 
+            width: 100%
+            & h3
+                margin-bottom: clamp(1rem, -1rem + 3.33vw, 2rem)
+            & button
+                width: 60%
+
+        &_tg
+            margin: 0
+            & h3
+                margin: 0
+                width: 100%
+            &_images
+                position: relative
     
-@media (max-width: 430px)
+
+@media (max-width: 960px)
     .form_wrapper
         padding: 32px 0
     .form
         padding: 0 16px
-        flex-direction: column
+        width: 100%
+        align-items: center
         &_info 
-            width: 100%
+            width: 80%
             margin-top: 32px
             margin-bottom: 16px
             & p
-                font-size: 8px
-                margin-bottom: 32px
+                font-size: clamp(0.5rem, 0.25rem + 1.25vw, 1rem)
+                margin-bottom: clamp(2rem, 1rem + 5vw, 4rem)
             & h3
-                font-size: 24px
-                margin-bottom: 8px
+                font-size: clamp(1.5rem, 0.438rem + 5.31vw, 3.625rem)
+                margin-bottom: clamp(0.5rem, 0.25rem + 1.25vw, 1rem)
             & button
               width: 100%
               font-size: 12px
               height: 38px
             & span
-                font-size: 6px  
+                font-size: 8px  
                 margin-top: 8px
                 text-align: center
                 padding: 0 10%
 
         &_group
-            font-size: 10px
-            margin-bottom: 16px
+            font-size: clamp(0.625rem, 0.188rem + 2.19vw, 1.5rem)
+            margin-bottom: clamp(1rem, 0.5rem + 2.5vw, 2rem)
         &_input
-            padding: 0 0 12px 8px
+            padding: 0 0 clamp(0.75rem, 0.125rem + 3.13vw, 2rem) 8px
             width: 100%
         &_tg
             margin: 0
             & h3
                 margin: 0
-                font-size: 12px
+                font-size: clamp(0.75rem, -0.125rem + 4.38vw, 2.5rem)
                 text-align: center
                 width: 100%
             &_images
-                position: relative
                 justify-content: center
-                .tg_wrapper
-                    height: 151px
                 .tg
                     margin: 0
-                    margin-top: 22px
-                    margin-left: 78px
-                    & img
-                        height: 53px
+                    margin-top: 66px
+                    margin-left: 250px
                     & p
-                        font-size: 10px
+                        font-size: clamp(0.5rem, 2.5vw, 1.5rem)
                         line-height: 11px
-                        margin-top: 8px
+
+@media (max-width: 700px)    
+    .tg_wrapper
+        height: 350px
+    .form_tg_images
+
+        .tg
+            margin-top: 50px
+            margin-left: 185px
+            & img
+                height: 115px
+            & p
+                margin-top: clamp(0.5rem, 0.079rem + 2.11vw, 1rem)
+@media (max-width: 500px)    
+    .form_info span
+        font-size: 6px
+    .tg_wrapper
+        height: 250px
+    .form_tg_images
+
+        .tg
+            margin-top: 35px
+            margin-left: 130px
+            & img
+                height: 85px
+@media (max-width: 380px)    
+    .tg_wrapper
+        height: 151px
+    .form_tg_images
+
+        .tg
+            margin-top: 20px
+            margin-left: 80px
+            & img
+                height: 53px
 
             
         

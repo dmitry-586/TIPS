@@ -22,6 +22,9 @@ footer
 
     &_1
         margin-right: 46px
+        height: clamp(2.938rem, -4.229rem + 7.96vw, 5.625rem)
+    &_2
+        height: clamp(2.875rem, -3.792rem + 7.41vw, 5.375rem)
 
 .footer_bottom
     display: flex
@@ -43,7 +46,6 @@ footer
         .footer_image_wrapper
             display: flex
             gap: 16px
-            
 
     &_right
         display: flex
@@ -63,25 +65,50 @@ footer
     
                
 //media
+@media (max-width: 1440px)
+    .footer_bottom_menu
+        gap: clamp(1.688rem, -46.482rem + 59.29vw, 6.875rem)
 
-@media (max-width: 1760px)
+@media (max-width: 1300px)
+    footer
+        padding: 40px 0
     .footer_top
         padding-bottom: 32px
         &_1
-            width: 308px
+            width: clamp(15.625rem, 8.875rem + 11.25vw, 19rem)
             margin-right: 40px
         &_2
-            width: 660px
-    .footer_bottom_right
-        align-items: flex-end
-    .footer_bottom_menu
-        gap: 32px
+            width: clamp(37.5rem, 30rem + 12.5vw, 41.25rem)
+    .footer_bottom
+        flex-wrap: wrap
+        &_menu
+            order: 1
+            & ul
+                margin-bottom: 0
+                gap: 32px
+             
+        &_right
+            order: 3
+            width: 100%
+            position: relative
+            flex-direction: row
+            align-items: flex-end
+            margin-top: 32px
+            & button
+                width: 60%
+                margin: 0 
+            & p
+                margin: 0
+                
+        &_left
+            order: 2
+            gap: 16px
+            
 
 @media (max-width: 430px)
     body
         line-height: 11px
     footer
-        
         padding: 32px 0
         & a
             line-height: 11px
@@ -111,7 +138,6 @@ footer
                 margin-bottom: 0
                 gap: 16px
              
-           
         &_right
             order: 2
             & button
