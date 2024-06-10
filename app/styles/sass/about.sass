@@ -1,28 +1,40 @@
-.main_p_wrapper
-    flex-direction: column
-    width: 100%
-    align-items: flex-start
-    gap: 16px
-    padding: 0 20%
+.about h1 
     margin-bottom: 64px
+
+.main_about_wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin-bottom: 64px
+    & p
+        max-width: 1214px
+        font-size: clamp(1.313rem, 0.813rem + 0.56vw, 1.5rem)
     & ul
         display: flex
         flex-direction: column
         gap: 8px
         color: #8000FF
         font-family: "Brygada 1918"
-        font-size: 24px
+        font-size: clamp(1.313rem, 0.813rem + 0.56vw, 1.5rem)
         font-weight: 400
+        margin-bottom: 0
         & li a 
             color: #8000FF
 
+    .about_p_wrapper
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+
+        
 .button_wrapper
     width: 100%
     display: flex
     justify-content: center
-    & button
-        width: 238px
-        margin: 64px 0
+    margin-top: 64px
+    margin-bottom: 128px
 
 .team
     display: flex
@@ -45,4 +57,36 @@
         gap: 16px
         & p
             margin: 0
+
+@media (max-width: 960px)
+    .about h1
+        margin-bottom: 32px
+    .child_2
+        display: none
+    .main_about_wrapper
+        & p
+            font-size: clamp(0.875rem, 0.656rem + 1.09vw, 1.313rem)
+        & a
+            font-size: clamp(1rem, 0.844rem + 0.78vw, 1.313rem)
+        & ul
+            gap: 0
+    .button_wrapper
+        margin-top: 32px
+        margin-bottom: 64px
+        font-size: clamp(0.875rem, 0.656rem + 1.09vw, 1.313rem)
+        & button
+            padding: 10px 35px
+
+    .team
+        flex-direction: column
+        max-width: 600px
+        .egor_img
+            height: clamp(12.5rem, 5.313rem + 35.94vw, 26.875rem)
+            margin-bottom: 12px
+        &_header p
+            margin-bottom: 12px
+        .egor_feedback
+            gap: 8px
+        
+        
         

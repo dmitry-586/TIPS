@@ -1,6 +1,6 @@
 footer
     background: black
-    padding: 64px 0
+    padding: 0 0 64px 0
     color: white
     font-family: "IBM Plex Sans"
     font-weight: 300
@@ -19,7 +19,8 @@ footer
     border-bottom: 1px solid white
     padding-bottom: 53.4px
     margin-bottom: 32px
-
+    align-items: center
+    padding-top: 64px
     &_1
         margin-right: 46px
         height: clamp(2.938rem, -4.229rem + 7.96vw, 5.625rem)
@@ -52,9 +53,6 @@ footer
         flex-direction: column
         justify-content: space-between
 
-        & button
-            width: 267px
-
     &_menu
         display: flex
         gap: 110px
@@ -71,9 +69,9 @@ footer
 
 @media (max-width: 1300px)
     footer
-        padding: 40px 0
+        padding: 0 0 40px 0
     .footer_top
-        padding-bottom: 32px
+        padding: 32px 0
         &_1
             width: clamp(15.625rem, 8.875rem + 11.25vw, 19rem)
             margin-right: 40px
@@ -103,55 +101,97 @@ footer
         &_left
             order: 2
             gap: 16px
+
+@media (max-width: 960px)
+    .footer
+        &_top
+            flex-wrap: wrap
+            gap: 20px
+            &_1
+                height: clamp(1.313rem, -0.454rem + 5.65vw, 2.938rem)
+                width: clamp(8.75rem, 1.277rem + 23.91vw, 15.625rem)
+                margin: 0
+            &_2
+                width: 100%
+        &_bottom
+            &_menu
+                width: 100%
+                justify-content: space-around
+                margin-bottom: 32px
+            &_right
+                justify-content: space-between
+                flex-direction: column
+                width: 60%
+                margin: 0
+                align-content: flex-end
+                & button
+                    width: 100%
+                & p
+                    text-align: end
+            &_left
+                & p
+                    margin: 0
+
             
 
-@media (max-width: 430px)
-    body
-        line-height: 11px
+@media (max-width: 560px)
     footer
         padding: 32px 0
         & a
             line-height: 11px
+            font-size: 12px
         & p
             font-size: 12px
     .footer_top
         flex-direction: column
         padding-bottom: 16px
         margin-bottom: 16px
+        align-items: flex-start
+        gap: 0
+        padding-top: 0
         &_1
-            height: 21px
-            width: 140px
             margin: 0 0 16px 0
         &_2
-            width: 288px
-            height: 20px
+            height: clamp(1.25rem, -0.833rem + 10.42vw, 2.813rem)
     .footer_bottom
         flex-direction: column
+        position: relative
         &_menu
             order: 1
             gap: 27px
+            line-height: clamp(0.688rem, -0.396rem + 5.42vw, 1.5rem)
+            margin-bottom: 0
             & p
-                font-size: 12px
+                font-size: clamp(0.75rem, -0.25rem + 5vw, 1.5rem)
                 margin-bottom: 16px
             & ul
-                font-size: 10px
+                font-size: clamp(0.625rem, -0.292rem + 4.58vw, 1.313rem)
                 margin-bottom: 0
                 gap: 16px
              
         &_right
             order: 2
+            margin: 0
+            position: static
+            width: 100%
             & button
                 width: 100%
-                height: 38px
-                font-size: 12px
+                padding: 12px 20px
+                font-size: 14px
                 margin: 32px 0
             & p
                 position: absolute
-                bottom: 16px
+                right: 0
+                bottom: 0
+                
         &_left
             order: 3
             gap: 16px
             & p
                 margin: 0
+            & img
+                height: 25px
+        
+                
         
         

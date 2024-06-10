@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <!-- <base href="/"> -->
+    <!-- <base href="..//"> -->
 
-    <title><!-- #echo var = "title"-->></title>
+    <title><!--#echo var="title" --></title>
     <meta name="description" content="Startup HTML template OptimizedHTML 5" />
 
     <meta
@@ -49,39 +49,39 @@
       <div class="container">
         <div class="header_menu">
           <div class="logo">
-            <img class="header_logo" src="./images/dist/tips.svg" href="../" />
+            <img class="header_logo" src = "/images/dist/header/TIPS.svg" href="../" />
             <p class="header_info">
               Веб-студия по&nbsp;разработке продающих сайтов
             </p>
           </div>
-          <button class="header_burger_menu-btn" id="burger">
+          <button class="header_burger_menu-btn" id="burger" type="button">
             <span></span><span></span><span></span>
           </button>
           <ul class="menu">
             <li><a href="/">Главная</a></li>
-            <li><a href="/">Услуги</a></li>
-            <li><a href="/">Портфолио</a></li>
+            <li><a href="/services.html">Услуги</a></li>
+            <li><a href="#" id="sroll_to_portfolio">Портфолио</a></li>
             <li><a href="/about.html">О студии</a></li>
             <li><a href="/">Инвентарь</a></li>
           </ul>
           <div class="header_language">
-            <button class="header_feedback">Оставить заявку</button>
+            <button class="header_feedback" type="button">Оставить заявку</button>
             <img src="./images/dist/header/header_RU.svg" alt="#" />
           </div>
         </div>
         <div class="header_burger_menu">
           <div class="burger_menu_wrapper">
             <ul class="burger_menu">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Услуги</a></li>
+              <li><a href="/index.html">Главная</a></li>
+              <li><a href="/services.html">Услуги</a></li>
               <li><a href="#">Портфолио</a></li>
-              <li><a href="#">О студии</a></li>
+              <li><a href="/about.html">О студии</a></li>
               <li><a href="#">Инвентарь</a></li>
             </ul>
-            <img src="../images/dist/header/ru_burger.svg" alt="#" />
+            <img src="/images/dist/header/ru_burger.svg" alt="#" />
           </div>
           <div class="header_burger_language">
-            <button class="header_feedback">Оставить заявку</button>
+            <button class="header_feedback" type="button">Оставить заявку</button>
           </div>
           <ul class="burger_footer_menu">
             <li>Документы</li>

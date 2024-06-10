@@ -38,9 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //burger
 
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("burger")
-    .addEventListener("click", () => {
-      document.querySelector("header").classList.toggle("open");
-    });
+  document.getElementById("burger").addEventListener("click", () => {
+    document.querySelector("header").classList.toggle("open");
+  });
 });

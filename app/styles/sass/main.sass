@@ -14,22 +14,19 @@ p
   font-weight: 400
   line-height: 120%
   
-main 
-    padding-top: clamp(3.875rem, 0.208rem + 4.07vw, 5.25rem)
-
 .button
   font-family: "IBM Plex Sans"
   border-radius: 100px
   background: $accent
   color: white
-  width: 221px
-  height: 55px
+  padding: 15px 40px 15px 40px 
   border-style: none 
+  border: 1px solid transparent
   transition-duration: 1s
 
   &:hover
     border: 1px solid rgb(128, 0, 255)
-    background: transparent
+    background: white
     color: rgb(128, 0, 255)
 
 .logo
@@ -144,15 +141,20 @@ main
   padding: 64px 0
   
 .portfolio_images 
-  display: flex
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
   gap: 40px
-  flex-wrap: wrap
+  justify-content: center
   & img
-    transition: 1s
+    transition: 0.7s
     height: clamp(27rem, -1rem + 31.11vw, 37.5rem)
 
   & img:hover
     transform: scale(1.05)
+  
+  .picture_7
+    grid-column-start: 3
+    grid-column-end: 5
 
   .picture_8
     display: none
@@ -201,11 +203,16 @@ main
   //portfolio
 
   .portfolio_images
-    gap: clamp(1.25rem, -1.25rem + 4.17vw, 2.5rem) 
+    gap: clamp(1.25rem, -1.25rem + 4.17vw, 2.5rem)
+    grid-template-columns: repeat(3, 1fr) 
     & img
       height: clamp(25rem, 41.67vw, 37.5rem)
-    .picture_8
-      display: block
+    .picture_5, .picture_6
+      display: none
+    .picture_7
+      grid-column-start: 2
+      grid-column-end: 4
+   
     
 
 @media (max-width: 960px)
@@ -224,7 +231,6 @@ main
     font-size: clamp(0.75rem, 0.4rem + 1vw, 1rem)
   .main_btn_wrapper button
     width: 60%
-    height: 45px
     font-size: clamp(1.125rem, 0.863rem + 0.75vw, 1.313rem)
     margin-bottom: 50px
   .main_menu
@@ -245,10 +251,14 @@ main
       margin-bottom: 32px
     &_images
       gap: 20px
+      grid-template-columns: repeat(2, 1fr)
       & img
         height: clamp(21.25rem, -1.5rem + 65vw, 37.5rem)
-      .picture_8
-        display: none
+      .picture_7
+        grid-column-start: 1
+        grid-column-end: 3
+        width: 100%
+      
   
 
 @media (max-width: 560px)
@@ -279,10 +289,10 @@ main
       font-size: 10px
 
   .main_btn_wrapper button
-    width: 283px
-    height: 34px
+    padding: 10px 30px
     font-size: 12px
     margin: 0
+    width: 100%
 
   .main_menu
     flex-direction: column
@@ -318,7 +328,8 @@ main
   .portfolio
     &_images 
       gap: clamp(0.5rem, -0.5rem + 5vw, 1.25rem)
-
+      .picture_5, .picture_6
+        display: none
       & img
         height: clamp(12.125rem, -0.042rem + 60.83vw, 21.25rem)
 
@@ -329,6 +340,3 @@ main
 
   100%
     opacity: 1
-
-    
-    

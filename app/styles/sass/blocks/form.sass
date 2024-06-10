@@ -28,7 +28,7 @@
         & span 
             font-family: "IBM Plex Sans"
             margin-top: 16px
-            font-size: 10px
+            font-size: 12px
             line-height: 12px
             font-weight: 100
 
@@ -39,6 +39,7 @@
     flex-direction: column
     position: relative
     margin-bottom: 32px
+
 
 .form_input
     color: white
@@ -119,10 +120,12 @@
             justify-content: center
     .form
         padding: 0 32px
-        width: clamp(56.25rem, -10.417rem + 111.11vw, 62.5rem)
+        // width: clamp(56.25rem, -10.417rem + 111.11vw, 62.5rem)
         flex-direction: column
+        align-items: center
         &_info 
             width: 100%
+            align-items: center
             & h3
                 margin-bottom: clamp(1rem, -1rem + 3.33vw, 2rem)
             & button
@@ -143,11 +146,12 @@
     .form
         padding: 0 16px
         width: 100%
-        align-items: center
+        
         &_info 
             width: 80%
             margin-top: 32px
             margin-bottom: 16px
+            align-items: flex-start
             & p
                 font-size: clamp(0.5rem, 0.25rem + 1.25vw, 1rem)
                 margin-bottom: clamp(2rem, 1rem + 5vw, 4rem)
@@ -157,14 +161,14 @@
             & button
               width: 100%
               font-size: 12px
-              height: 38px
             & span
-                font-size: 8px  
+                font-size: 10px  
                 margin-top: 8px
                 text-align: center
                 padding: 0 10%
 
         &_group
+            width: 100%
             font-size: clamp(0.625rem, 0.188rem + 2.19vw, 1.5rem)
             margin-bottom: clamp(1rem, 0.5rem + 2.5vw, 2rem)
         &_input
@@ -201,7 +205,8 @@
                 margin-top: clamp(0.5rem, 0.079rem + 2.11vw, 1rem)
 @media (max-width: 500px)    
     .form_info span
-        font-size: 6px
+        font-size: 8px
+        padding: 0
     .tg_wrapper
         height: 250px
     .form_tg_images
